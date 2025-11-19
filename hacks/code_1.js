@@ -8,11 +8,19 @@ let price = 0;
 console.log(price || "Getting the price");
 
 //2. Using ~~ operator to convert anything into Number
+let number = Math.random() * 50;
+
 // Using Math.floor() to round the float to integer
-console.log(Math.floor(Math.random() * 50));
+console.log("Math.floor() -", Math.floor(number));
 
 // Using ~~ operator
-console.log(~~(Math.random() * 50));
+console.log("Rounding using double bitwise operator -", ~~number);
+
+// Using Math.trunc() to eliminate the deciamals
+console.log("Math.trunc() -",Math.trunc(number));
+
+// Using ~~ operator
+console.log("Truncating using double bitwise operator -",~~number);
 
 // Random String
 console.log("Whitespace -", ~~("Whitespaces"));
@@ -58,7 +66,7 @@ console.log(list_1);
 const cars = [
   { make: 'Opel', class: 'Regular' },
   { make: 'Bugatti', class: 'Supercar' },
-  { make: 'Ferrari', class: 'Supercar' },
+  { make: 'Ferrari', cla4ss: 'Supercar' },
   { make: 'Ford', class: 'Regular' },
   { make: 'Honda', class: 'Regular' },
 ];
@@ -86,6 +94,7 @@ console.log(grammer.replace(/syno/, 'anto'));
 console.log(grammer.replace(/syno/g, 'anto'));
 
 //8. Add elements inside the new array
+let a_1 = [10, 20];
 let c_1 = [30, 40, ...a_1, 50, 60];
 console.log(c_1);
 
