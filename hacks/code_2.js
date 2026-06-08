@@ -38,12 +38,17 @@ let isValid = true;
 isValid && console.log("Valid");
 
 // 8. Optional chaining
-let user = {name: "John", address: {city: "New York"}};
-let user_1 = {name: "James", address: {}};
+// let user = {name: "John", address: {city: "New York"}};
+// let user_1 = {name: "James", address: {}};
+// console.log(user?.address?.city);
+// console.log(user_1?.address?.city);
+let user = {name: "John", address: { city: "New York" }};
+let user_1 = { name: "James", address: {} };
 console.log(user?.address?.city);
 console.log(user_1?.address?.city);
 
 // 9. Nullish Coalescing Operator
+// Nullish Coalescing Operator is a logical operator that returns the value on the right-hand side if the left hand value is "null" or "undefined". Otherwise it returns the left hand value.
 let username = null;
 console.log(username ?? "Guest");
 

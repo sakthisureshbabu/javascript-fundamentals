@@ -1,6 +1,6 @@
 // 1. forEach
-// const arr = ['a', 'b', 'c', 'd', 'e'];
-// arr.forEach(val => console.log(val));
+const arr = ['a', 'b', 'c', 'd', 'e'];
+arr.forEach(val => console.log(val));
 
 // 2. map
 // const arr = [1, 2, 3, 4, 5]

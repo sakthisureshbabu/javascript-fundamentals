@@ -1,9 +1,19 @@
 // 11. Tagged Template literals
+// function highlight(strings, ...values) {
+//     return strings.reduce((prev, curr, i) => `${prev}${curr}${values[i] || ''}`, '');
+// }
+// let price = 10;
+// console.log(highlight`The price is ${price} dollars.`);
 function highlight(strings, ...values) {
-    return strings.reduce((prev, curr, i) => `${prev}${curr}${values[i] || ''}`, '');
+    return strings.reduce((prev, curr, i) => `${prev}${curr}${values[i] || ''}` , '');
 }
-let price = 10;
+
+let price = [10, 20, 30];
+let cost = 10;
 console.log(highlight`The price is ${price} dollars.`);
+console.log(highlight`The cost is ${cost} dollars`);
+console.log(highlight`The cost is in dollars`);
+
 
 // 12. Convert objects to array
 let person = {name: "Alice", age: 25};
@@ -18,6 +28,11 @@ let uniqueNumbers = [...new Set(numbers)];
 console.log(uniqueNumbers);
 
 // 14. Dynamic property names
+// let dynamicKey = 'name';
+// let person_1 = {[dynamicKey]: "Alice"};
+// let person_2 = {dynamicKey: "Johnson"};
+// console.log(person_1);
+// console.log(person_2);
 let dynamicKey = 'name';
 let person_1 = {[dynamicKey]: "Alice"};
 let person_2 = {dynamicKey: "Johnson"};
@@ -68,15 +83,18 @@ const memoize = (fn) => {
 
 // 20. ^ swapping
 let a=1, b=2;
-a^=b;
-b^=a;
-a^=b;
-console.log(a,b);
+a ^= b;
+b ^= a;
+a ^= b;
+console.log(a, b);
 
 // 21. Flattening Array with flat()
 let nestedArray = [1, [2, [3, [4]]]];
-let flatArray = nestedArray.flat(Infinity);
+let flatArray = nestedArray.flat(3);
+let flatArray_2 = nestedArray.flat(Infinity);
 console.log(flatArray);
+console.log(flatArray_2);
+
 
 // 22. Convert to Numbers with Unary plus
 let str = "123";
@@ -106,10 +124,15 @@ const skills = ["python", "javascript", "cloud", "c++"];
 console.log(skills.includes("c++"));
 
 // 28. The power of Function.prototype.bind()
+// const greet = function(greeting, punctuation) {
+//     return `${greeting}, ${this.name}${punctuation}`;
+// };
+// const greetJohn = greet.bind({name: "John"}, "Hello");
+// console.log(greetJohn("!"));
 const greet = function(greeting, punctuation) {
-    return `${greeting}, ${this.name}${punctuation}`;
-};
-const greetJohn = greet.bind({name: "John"}, "Hello");
+    return `${greeting}, ${this.name}${punctuation}`
+}
+const greetJohn = greet.bind({ name: "John" }, "Hello");
 console.log(greetJohn("!"));
 
 // 29. Preventing Object Modification

@@ -87,26 +87,28 @@ const cars_list = ['Opel', 'Bugatti', 'Opel', 'Ferrari', 'Ferrari', 'Opel'];
 const unique_cars = [...new Set(cars_list)];
 console.log(unique_cars);
 
+
 // 7. Using regular expression to replace string characters
 const grammer = "synonym synonym";
 
-console.log(grammer.replace(/syno/, 'anto'));
-console.log(grammer.replace(/syno/g, 'anto'));
+// console.log(grammer.replace(/syno/, 'anto'));
+// console.log(grammer.replace(/syno/g, 'anto'));
+console.log(grammer.replace(/syno/, "anto"));
+console.log(grammer.replace(/syno/g, "anto"))
 
 //8. Add elements inside the new array
 let a_1 = [10, 20];
-let c_1 = [30, 40, ...a_1, 50, 60];
+let c_1 = [30, 40, ...a_1, 50];
 console.log(c_1);
 
 //9. Copy array elements
 const a_4 = [1, 2, 3, 4, 5];
 const b_3 = [...a_4];
-
 console.log(b_3);
 
 //10. Concatenate array using spread operator
 let a_5 = [1, 2, 3, 4];
 let b_4 = [4, 5];
 
-const merge_1 = [...a_5, ...b_4];
-console.log(merge_1);
+const merge = [...a_5, ...b_4];
+console.log(merge);
